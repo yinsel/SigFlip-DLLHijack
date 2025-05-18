@@ -1,6 +1,6 @@
 # SigFlip-DLLHijack
 
-利用[SigFlip](https://github.com/med0x2e/SigFlip)将shellcode嵌入至白exe中，达到分离的目的，以减少DLL的静态特征。
+利用[SigFlip](https://github.com/med0x2e/SigFlip)将shellcode嵌入至白exe中，并保持签名不变，达到分离的目的，以减少DLL的静态特征。
 
 ## 使用方式
 
