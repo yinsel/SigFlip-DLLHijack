@@ -97,3 +97,20 @@ void decrypt(unsigned char* data, long dataLen, unsigned char* key, long keyLen,
 		result[x] = data[x] ^ S[t];
 	}
 }
+
+/*
+	RC4A
+*/
+VOID RC4(LPBYTE dwBytes, DWORD dwLength, LPSTR dwKey, DWORD dwKeySize)
+{
+
+	SystemFunction032Func pSystemFunction032Func = (SystemFunction032Func)GetProcAddress(LoadLibraryA("advapi32.dll"), "SystemFunction032");
+
+	struct ustring data, key;
+	data.Buffer = dwBytes;
+	data.Length = dwLength;
+
+	key.Buffer = (UCHAR*)dwKey;
+	key.Length = dwKeySize;
+	pSystemFunction032Func(&data, &key);
+}

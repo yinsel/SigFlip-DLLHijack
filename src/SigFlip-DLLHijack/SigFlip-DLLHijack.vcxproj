@@ -149,7 +149,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h" />
     <ClInclude Include="function.h" />
     <ClInclude Include="SigFlip.h" />
     <ClInclude Include="unlock.hpp" />
